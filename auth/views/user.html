@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="myApp">
+    
+<head>
+    <title>User Login and Sessions</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+        
+<body>  
+    <div class="form-container" ng-controller="myController">
+        <a class="btn btn-primary mb-3" id="homeLink" href="/"><i class="fas fa-home"></i> Home</a>
+        <h3 id="sectionTitle" class="form-header"><i class="far fa-user"></i> User Profile</h3>
+        <form method="POST" action="/user/update">
+            <div class="form-group">
+                <label for="username"><i class="fas fa-signature"></i> Username</label>
+                <input type="text" class="form-control" id="username" name="username" ng-model="user.username" disabled>
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope-square"></i> Email</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" ng-model="user.email">
+                <small id="emailHelp" class="form-text text-muted">Please enter your desired email above</small>
+            </div>
+            <div class="form-group">
+                <label for="color"><i class="fas fa-palette"></i> Favorite Color</label>
+                <input type="text" class="form-control" id="color" name="color" aria-describedby="colorHelp" ng-model="user.color">
+                <small id="emailHelp" class="form-text text-muted">Please enter your desired color above</small>
+            </div>
+            <input class="btn btn-success" type="submit" id="save" value="Save">
+        </form>
+    </div>
+    <form method="POST" action="/user/delete">
+        <input class="btn btn-danger mt-3" type="submit" id="delete" value="Delete User">
+    </form>
+    <hr>
+    <span id="userMsg">
+    <%= msg %>
+    </span>
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <script src="/javascripts/my_app.js"></script>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
