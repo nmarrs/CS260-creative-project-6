@@ -9,10 +9,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
         
-<body>  
-    <div class="form-container">
-        <h3 class="form-header">Login</h3>
-        <form method="POST" action="/login">
+<body class="mx-auto text-center">  
+    <div class="card shadow loginCard mx-auto m-3">
+        <div class="form-container mx-auto">
+            <div class="card-title">
+                <h3 class="form-header mt-3"><i class="fas fa-sign-in-alt"></i> Login</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/login">
             <div class="form-group">
                 <label for="username"><i class="fas fa-signature"></i> Username</label>
                 <input type="text" class="form-control" id="username" name="username" aria-describedby="usernameHelp" placeholder="Enter your username">
@@ -24,11 +28,13 @@
                 <small id="passwordHelp" class="form-text text-muted">Please enter your password above</small>
             </div>
             <input type="submit" id="login" value="Login" class="btn btn-success">
-        </form>
+                </form>
+            </div>
+        </div>
     </div>
-    <a class="btn btn-primary mt-3" id="signUpLink" href="/signup">Sign Up</a>
+    <a class="btn btn-primary mt-3" id="signUpLink" href="/signup"> <i class="fas fa-user-plus"></i> Sign Up</a>
     <hr>
-    <span id="loginMsg">
+    <span id="loginMsg" class="text-white">
     <%= msg %>
     </span>
 </body>

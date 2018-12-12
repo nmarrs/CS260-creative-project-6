@@ -7,33 +7,30 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Include Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    
-    <style>
-        .colorBox {
-            width: 20px;
-            height: 20px;
-            background-color: <%= color %>;
-        }
-    </style>
 </head>
         
-<body>  
+<body class="mx-auto text-center">  
     <div ng-controller="myController">
-        <h2 id="welcomeText">Welcome <i class="fas fa-home"></i>. You are logged in as
+        <h2 id="welcomeText" class="text-white">Welcome <i class="fas fa-home"></i>. You are logged in as
             <%= username %>.
         </h2>
         <a class="btn btn-danger m-3" id="logoutLink" href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
         <a class="btn btn-primary m-3" id="editLink" href="/user"><i class="fas fa-user-edit"></i> Edit User</a>
     </div>
     <hr>
-    <span id="indexMsg">
+    <h4 class="text-white">Enjoy playing a knockoff version of Minecraft :)</h4>
+    <p class="text-white">If you save your progress you will be able to come back to your world and keep building! Only authenticated users get to play ;)</p>
+    <iframe src="https://funhtml5games.com?embed=mineblock" style="width:854px;height:480px;border:none;" frameborder="0" scrolling="no">
+      <p>Your browser does not support iframes.</p>
+    </iframe>
+    <br /> 
+    <span id="numberText" class="text-white">
+    Favorite Number: <%= user %>
+      </span>
+    <hr>
+    <span id="indexMsg" class="text-white">
         <%= msg %>
     </span>
-    <hr>
-    <span id="colorText">
-    Favorite Color: <div class="colorBox"></div>
-        <%= color %>
-      </span>
     <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
     <script src="/javascripts/my_app.js"></script>
 </body>

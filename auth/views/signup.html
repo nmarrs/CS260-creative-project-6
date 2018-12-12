@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
         
-<body>  
-    <div class="form-container">
-        <p class="form-header">Sign Up</p>
+<body class="mx-auto text-center">
+    <div class="card shadow loginCard mx-auto m-3">
+    <div class="form-container mx-auto">
+        <div class="card-title">
+        <h3 class="form-header mt-3"><i class="fas fa-user-plus"></i> Sign Up</h3>
+        </div>
+        <div class="card-body">
         <form method="POST" action="/signup">
             <div class="form-group">
                 <label for="username"><i class="fas fa-signature"></i> Username</label>
@@ -30,9 +34,11 @@
             </div>
             <input class="btn btn-success" type="submit" id="register" value="Register">
         </form>
+        </div>
+        </div>
     </div>
     <hr>
-    <span id="signupMsg">
+    <span id="signupMsg" class="text-white">
     <%= msg %>
     </span>
 </body>
